@@ -4,105 +4,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rimovel Studioは、日常に新しい発見と楽しさを届けるインディーゲームスタジオです。">
-  <title>Rimovel Studio | Indie Game Studio</title>
+  <title>GRAVIKNOT（グラビノット）｜重力パズル｜Rimovel Studio</title>
+  <meta name="description" content="スワイプで重力を変え、ゴールを目指すパズルゲーム。全100ステージと日替わりの難問に、Androidで無料で挑戦。">
+  <link rel="canonical" href="https://eooable-arch.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="Rimovel Studio">
+  <meta property="og:title" content="GRAVIKNOT｜スワイプで重力を変えるパズル">
+  <meta property="og:description" content="全100ステージと日替わりの難問。Google Playで無料で遊べます。">
+  <meta property="og:url" content="https://eooable-arch.github.io/">
+  <meta property="og:image" content="https://eooable-arch.github.io/assets/graviknot-gameplay-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GRAVIKNOTの実際のプレイ画面。青い盤面に壁、鍵、ワープがある。">
+  <meta name="twitter:image" content="https://eooable-arch.github.io/assets/graviknot-gameplay-preview.jpg">
+  <meta name="twitter:image:alt" content="GRAVIKNOTの実際のプレイ画面。青い盤面に壁、鍵、ワープがある。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GRAVIKNOT｜スワイプで重力を変えるパズル">
+  <meta name="twitter:description" content="全100ステージと日替わりの難問。Google Playで無料で遊べます。">
   <style>
-    :root { color-scheme: dark; }
+    :root { color-scheme: dark; --bg: #0a0d17; --panel: #141b2c; --ink: #f5f7ff; --subtle: #b8c5dc; --line: #303b55; --green: #a8f6cd; }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, sans-serif;
-      background: #0a0d17;
-      color: #f5f7ff;
-      line-height: 1.7;
-    }
-    header {
-      padding: 22px 6%;
-      border-bottom: 1px solid #242b40;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .logo { font-size: 18px; font-weight: 800; letter-spacing: .06em; }
-    nav a { color: #cbd5e1; text-decoration: none; margin-left: 14px; }
-    main { max-width: 1000px; margin: auto; padding: 0 24px; }
-    .hero { text-align: center; padding: 105px 0 90px; }
-    .eyebrow { color: #8bbcff; font-size: 13px; letter-spacing: .2em; }
-    h1 { font-size: clamp(42px, 9vw, 78px); line-height: 1.1; margin: 18px 0; }
-    h2 { font-size: 30px; margin-bottom: 14px; }
-    .gradient {
-      background: linear-gradient(120deg, #7dd3fc, #c4b5fd);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .lead { color: #aebbd2; font-size: 17px; }
-    section { margin-bottom: 90px; }
-    .card {
-      padding: 32px;
-      background: #141b2c;
-      border: 1px solid #303b55;
-      border-radius: 22px;
-    }
-    .tag { color: #93c5fd; font-size: 13px; }
-    .game-title { font-size: 36px; margin: 8px 0; }
-    .play-link { display: inline-flex; align-items: center; justify-content: center; gap: 6px; max-width: 100%; background: #a8f6cd; color: #09182d; text-decoration: none; font-weight: 800; padding: 13px 16px; border-radius: 12px; min-height: 48px; font-size: clamp(13px, 3.8vw, 16px); white-space: nowrap; }
-    @media (max-width: 480px) { .card { padding: 20px; } .play-link { width: 100%; padding: 12px 8px; } }
-    .play-link:hover, .play-link:focus-visible { background: #d1ffe5; outline-offset: 3px; }
-    .muted { color: #aebbd2; }
-    a { color: #93c5fd; }
-    footer {
-      text-align: center;
-      border-top: 1px solid #242b40;
-      padding: 28px 16px;
-      color: #94a3b8;
-      font-size: 13px;
-    }
+    body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; }
+    header { border-bottom: 1px solid #242b40; }
+    .header-content { width: min(100% - 36px, 1000px); margin-inline: auto; min-height: 63px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; padding-block: 8px; }
+    .logo { font-size: 14px; font-weight: 800; letter-spacing: .09em; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; margin-left: 14px; color: var(--subtle); font-size: 14px; }
+    a { color: #a9d4ff; text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid #8bd0fb; outline-offset: 4px; }
+    main { width: min(100% - 36px, 1000px); margin-inline: auto; }
+    .hero { position: relative; overflow: hidden; isolation: isolate; margin-top: clamp(14px, 5vw, 48px); padding: clamp(20px, 6vw, 72px); border: 1px solid var(--line); border-radius: 24px; background: radial-gradient(ellipse at 97% 16%, #222856 0%, transparent 63%), var(--panel); }
+    .hero { display: grid; grid-template-columns: 1fr minmax(136px, 23%); align-items: center; gap: clamp(12px, 3vw, 32px); }
+    .hero-visual { min-width: 0; margin: 0; }
+    .hero-visual img { width: 100%; max-width: 164px; height: auto; display: block; margin-inline: auto; border-radius: 13px; border: 1px solid #486188; }
+    .hero-visual figcaption { margin-top: 5px; text-align: center; color: var(--subtle); font-size: 11px; }
+    .hero::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0 39px, #a8c7ff08 39px 40px); mask-image: linear-gradient(90deg, transparent 35%, #000); }
+    .eyebrow { margin: 0 0 8px; color: #a3d9ff; font-size: 12px; font-weight: 750; letter-spacing: .14em; }
+    h1 { margin: 0; font-size: clamp(32px, 8.6vw, 84px); font-weight: 900; line-height: 1.02; letter-spacing: -.055em; }
+    .hook { margin: 13px 0 5px; font-size: clamp(16px, 4.6vw, 29px); font-weight: 750; }
+    .lead { margin: 0 0 16px; color: var(--subtle); font-size: clamp(14px, 3.7vw, 17px); }
+    .play-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; min-height: 52px; max-width: 100%; border-radius: 12px; background: var(--green); color: #09182d; text-decoration: none; text-align: center; font-weight: 800; line-height: 1.3; }
+    .play-link:hover, .play-link:focus-visible { background: #d1ffe5; }
+    .play-icon { width: 14px; height: 16px; flex: 0 0 auto; fill: currentColor; }
+    .note { margin: 7px 0 0; color: var(--subtle); font-size: 13px; }
+    .details { padding-block: 32px; }
+    h2 { margin: 0 0 8px; font-size: clamp(20px, 5.5vw, 28px); }
+    .cards { list-style: none; padding: 0; margin: 12px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .cards li { padding: 15px 17px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
+    .cards strong { display: block; }
+    .cards span, .muted { color: var(--subtle); }
+    #contact { border-top: 1px solid #242b40; padding-block: 25px 36px; }
+    #contact p { margin: 0 0 6px; }
+    footer { text-align: center; border-top: 1px solid #242b40; padding: 24px 18px; color: var(--subtle); font-size: 13px; }
+    @media (max-width: 660px) { .hero { grid-template-columns: minmax(0, 1fr); } .hero-visual { margin-top: 4px; } }
+    @media (max-width: 550px) { .play-link { width: 100%; } .cards { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">RIMOVEL STUDIO</div>
-    <nav>
-      <a href="#games">Games</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="header-content">
+      <div class="logo">RIMOVEL STUDIO</div>
+      <nav aria-label="主要ナビゲーション">
+        <a href="#games">ゲーム</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="hero">
-      <div class="eyebrow">INDEPENDENT GAME STUDIO</div>
-      <h1>Play Beyond<br><span class="gradient">Limits.</span></h1>
-      <p class="lead">
-        ひらめきの先に、まだ知らない楽しさを。<br>
-        Rimovel Studioは、遊び心と発見を届けます。
-      </p>
-    </div>
-
-    <section id="games">
-      <h2>Our Games</h2>
-      <div class="card">
-        <div class="tag">GRAVITY PUZZLE</div>
-        <h3 class="game-title">GRAVIKNOT</h3>
-        <p class="muted">
-          重力を操り、道を切り開くパズルゲーム。<br>
-          100のステージと、毎日挑める難問があなたを待っています。
-        </p>
-        <p class="tag">Android · Now available on Google Play</p>
-        <p class="muted">無料で100ステージと毎日の重力パズルに挑戦！</p>
-        <p><a class="play-link" href="https://play.google.com/store/apps/details?id=com.eooablearch.graviknot" target="_blank" rel="noopener noreferrer" aria-label="Download GRAVIKNOT on Google Play">▶ Google Playで無料プレイ</a></p>
+    <section class="hero" id="games" aria-labelledby="game-title">
+      <div class="hero-copy">
+      <p class="eyebrow">グラビノット / 重力パズル</p>
+      <h1 id="game-title">GRAVIKNOT</h1>
+      <p class="hook">スワイプで重力を変え、ゴールへ。</p>
+      <p class="lead">全100ステージと、毎日変わる難問。<br>あなたなら何手で解ける？</p>
+      <a class="play-link" href="https://play.google.com/store/apps/details?id=com.eooablearch.graviknot&amp;referrer=utm_source%3Drimovel_studio%26utm_medium%3Downed_web%26utm_campaign%3Dgraviknot_homepage">
+        <svg class="play-icon" viewBox="0 0 14 16" aria-hidden="true" focusable="false"><path d="M1 1v14l12-7z"/></svg>
+        Google Playで無料ダウンロード
+      </a>
+      <p class="note">Android向け</p>
       </div>
+      <figure class="hero-visual">
+        <img src="/assets/graviknot-gameplay.jpg" width="580" height="1302" alt="青い盤面に、壁、鍵、トゲ、ワープが配置された重力パズル" data-gameplay>
+        <figcaption>実際のプレイ画面</figcaption>
+      </figure>
+    </section>
+
+    <section class="details" aria-labelledby="features-title">
+      <h2 id="features-title">どんなゲーム？</h2>
+      <ul class="cards">
+        <li><strong>上下左右にスワイプ</strong><span>引かれる方向を変えて、進む道を見つけよう。</span></li>
+        <li><strong>鍵・トゲ・ワープ</strong><span>鍵を取り、トゲを避け、ワープで先へ。</span></li>
+        <li><strong>全100ステージ＋日替わり</strong><span>クリアできたら、さらに少ない手数に挑戦。</span></li>
+      </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p class="muted">ゲームに関するお問い合わせはこちら。</p>
-        <a href="mailto:rimovelstudio@gmail.com">
-          rimovelstudio@gmail.com
-        </a>
-      </div>
+      <h2>お問い合わせ</h2>
+      <p class="muted">ゲームに関するお問い合わせはこちら。</p>
+      <a href="mailto:rimovelstudio@gmail.com">rimovelstudio@gmail.com</a>
+      <p><a href="/privacy.html">プライバシーポリシー</a></p>
     </section>
   </main>
 
